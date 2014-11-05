@@ -38,7 +38,7 @@ Pode parecer meio assustador no começo mas tente mudar uma coisinha aqui e acol
 
 "Fo-quem?"
 
-Foley. O termo é do inglês, bastante usado na área cinematográfica. Basicamente, foley é a reprodução dos sons do cotidiano. Esses sons são posteriormente adicionados aos filmes, jogos, anúncios, etc... E como fazemos How do you achieve that? Batendo coisas uma nas outras.
+Foley. O termo é do inglês, bastante usado na área cinematográfica. Basicamente, foley é a reprodução dos sons do cotidiano. Esses sons são posteriormente adicionados aos filmes, jogos, anúncios, etc... E como fazemos esses efeitos sonoros? Batendo coisas uma nas outras.
 
 Tá, isso foi uma simplificação exagerada mas os efeitos sonoros estão em todo lugar. Brinde dois copos de vidro, preste atenção no som. Será que dá pra usar num game? E se esfregar folhas de papel? Socar repolhos? E se der petelecos na bochecha para fazer som de água?
 
