@@ -2,11 +2,10 @@
 layout:     post
 title:      8 helpful Atom packages
 date:       2014-09-26 20:00:00
-permalink:  pt/atom-recommended-packages
+permalink:  atom-pacotes-recomendados
 categories: 
     - text editor
 comments:   true
-lang:       pt
 ---
 
 While [Atom is a great editor]({{site.baseurl}}/atom-editor-review/), the experience can be greatly improved by using a few of the many packages available - what follows is the list of the ones that I personally use and recommend.

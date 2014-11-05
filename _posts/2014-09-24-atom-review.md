@@ -1,74 +1,73 @@
 ---
 layout:     post
-title:      Atom review - Learn to love the bomb
+title:      Atom - Aprenda a amar a bomba
 date:       2014-09-24 20:00:00
-permalink:  pt/review-editor-atom
+permalink:  review-editor-atom
 categories: 
     - review
     - text editor
 comments:   true
-lang:       pt
 ---
-[Atom](https://atom.io/) is a free and open-source text-editor made by [Github](https://github.com/). It is highly modular, hackable and flexible - so if it doesn't fit your workflow out of the box, odds are that you can solve that by installing a few packages and changing a few configurations.
+
+<a href="http://atom.io/" target="_blank">Atom</a> é um editor de texto gratuito e open-source feito pelo pessoal da <a href="https://github.com/" target="_blank">Github</a>. Ele é altamente modular, 'hackeável' e flexível - então se ele não encaixar de imediato na sua produção, é bem fácil adequá-lo instalando algumas extensões e mudando algumas configurações.
 
 ![Basic Atom, after you start it]({{site.baseurl}}/assets/atom/basic.png)
 
 
-##The first experience is sublime
+##A primeira experiência é sublime
 
-At first glance, Atom is quite similar to [Sublime Text](http://www.sublimetext.com/).
+Uma das primeiras coisas que qualquer programador vai reparar é como o Atom é parecido com o <a href="http://www.sublimetext.com" target="_blank">Sublime Text</a>.
 
-It is not as fast as Sublime but it feels responsive, familiar even. The truth is that in many ways, it is.
+Não que seja tão rápido quanto mas a sensação é de familiaridade, a estética e a interface sendo bastante parecidas. O tema escuro e sóbrio, com pitadas de color, a árvore de arquivos com sua interface limpa... Inegavelmente parecidos.
 
-The general aesthetics and the UI are quite similar. The default theme is dark and sober, with a splash of color, the filetree presents a clean interface with which to manage files and folders.
+Os atalhos de teclado são basicamente os mesmos e o grande atrativo do Sublime Text, a paleta de comandos, também está presente. Você pode invocá-la com o convencional **Ctrl+Shift+P** (Cmd+Shift+P no Mac), te permitindo acessar até mesmo as entradas mais arcanas dos menus sem precisar gastar tempo procurando-as.
 
-As far as keyboard shorcuts go, they are (mostly) the same - which is likely to be a blessing for anyone who is used to Sublimes way of doing things.
+Toda essa similaridade, ao meu ver, é bastante positiva - querendo ou não o ST é um dos editores mais famosos e facilitar a transição para os usuários novos é bastante bom.
 
-The crown jewel of Sublime Text is also here - the command runner. Invoked by the conventional **Ctrl+Shift+P** (Cmd+Shift+P on Mac), it allows you to easily access more arcane menu entries without needing to take your hands out of the keyboard.
+##Desvendando o átomo
 
-##But Atom is much more
+Quando a novidade se esvai o que resta é apreciação pelo esforço que foi realizado afim de tornar o Atom tão amigável quanto possível. A interface limpa e o fácil acesso aos pacotes permite extender o editor sem suar a camisa.
 
-After the initial reaction, what remains is pure appreciation for the effort that was undertaken to make Atom as friendly as possible.
-
-The settings panel, accessible from the command runner or the menus, provides users with a clean UI to configure, install, update, search and remove packages and themes.
-
-These extra packages are highly useful and greatly extend Atom's usability. Among them you will find:
+Algumas das áreas cobertas pelas extensões:
 
 - Beautifiers
 - Linters
-- Spell Checkers
-- Deep Git integration
-- Compiling tools
+- Corretores ortográficos
+- Integração com Git
+- Ferramentas de compilação
 
-Along many other functionalities - [everything you need]({{site.baseurl}}/atom-recommended-packages) to make Atom feel like *the* text editor.
+A sensação é que, seja lá o que você precisar, [você vai encontrar]({{site.baseurl}}/atom-pacotes-recomendados). 
+
 ![Atoms package manager]({{site.baseurl}}/assets/atom/package.png)
 
 
-##Splitting the atom
+##Dividindo o átomo
 
-The reason why Atom is so incredibly extensible is due to the architecture choices made by the folks at Github. It is coded in Coffeescript and runs on top of Atom-Shell - essentially a browser-view for native desktop applications.
+O motivo pelo qual o Atom é tão maleável é a escolha de arquitetura feita pelo pessoal da Github. Escrito em CoffeeScript, rodando em cima do Atom-Shell - essencialmente uma janela de browser para aplicativos nativos de desktop.
 
-You can freely open the developer tools - the same ones you have on Chrome/Chromium - and modify anything you see to your hearts content.
+O legal disso é que você consegue abrir as ferramentas de desenvolvedor - as mesmas que existem no Chrome - e modificar tudo e qualquer coisa no programa.
 
-Don't like the scroll bar? Change it. Not happy with the cursor color? Change it. All of this accessible by pressing **Ctrl+Shift+I** (Cmd+Shift+I on Mac).
+Não gostou da barra de scroll? Pode mudar. Não está feliz com a cor do cursor? Pode mudar também. Basta apertar **Ctrl+Shift+I** (Cmd+Shift+I no Mac).
 
-It might take a bit longer to perfect the tool for your liking but after you do so, anything else will feel wrong.
+Isso pode tomar um certo tempo mas a ferramenta ficará ao seu gosto!
 
 ![Atom after I customized it to my liking]({{site.baseurl}}/assets/atom/custom.png)
 
-##Collaborative & highly engaging
+##Colaborativo & engajado
 
-Perhaps the most beautiful thing about Atom is also the one that is most subtle. Github made the very smart choice of having packages be simple git repositories - this means that collaborating is extremely easy and has spurred great growth.
+Talvez uma das melhores ideias por trás do Atom seja também uma das mais simples. Github fez a escolha acertada de hospedar os pacotes como simples repositórios git - isso criou um solo fértil pra colaboração, gerando um crescimento impressionante.
 
-Heck, I've made [a little package](https://atom.io/packages/language-moonscript) myself - it just is that easy.
+É tão fácil que até eu <a href="https://atom.io/packages/language-moonscript" target="_blank">fiz um pacote</a>.
 
-Never underestimate the importance of a thriving community - it is by itself a positive feature on any piece of software.
+##Serve pra você?
 
-##Is it for you?
-I've used it to write Lua, Moonscript, Javascript, HTML, CSS and Markdown - it has performed admirably in all cases.
+Já usei o Atom pra escrever código em Lua, MoonScript, JavaScript, HTML, CSS e Markdown - até agora, ele se comportou muito bem.
 
-I'm fully aware that it isn't the best tool for  every job - for instance, it doesn't handle (yet) files bigger than 2mb and there are faster, better integrated alternatives for certain languages and use cases.
+É claro que ele não será a ferramenta ideal para todo trabalho - por exemplo, ele ainda não consegue abrir arquivos maiores de 2mb e existem alternativas melhores, mais integradas para certas línguas.
+
+Levando isso em conta, como ele é gratuito, não há mal algum em experimentar.
+Aproveita e compartilha o que você achou e que [pacotes você considera essenciais]({{site.baseurl}}/atom-recommended-packages)!
 
 With all of that in mind, there really is no harm in trying Atom out - it is free and open source and you just might love it.
 
-If you have tried it, feel free to share your configuration and what [packages you deem essential]({{site.baseurl}}/atom-recommended-packages). :)
+If you have tried it, feel free to share your configuration and what [packages you deem essential]({{site.baseurl}}/atom-pacotes-recomendados). :)
