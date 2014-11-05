@@ -13,7 +13,6 @@ comments:   true
 
 ![Basic Atom, after you start it]({{site.baseurl}}/assets/atom/basic.png)
 
-
 ##A primeira experiência é sublime
 
 Uma das primeiras coisas que qualquer programador vai reparar é como o Atom é parecido com o <a href="http://www.sublimetext.com" target="_blank">Sublime Text</a>.
