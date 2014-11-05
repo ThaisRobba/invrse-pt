@@ -1,7 +1,7 @@
 ---
-layout: pt/page
+layout: page
 title: Lava Run
-permalink: /pt/jogos/lava-run/
+permalink: /jogos/lava-run/
 comments: true
 ---
 

@@ -1,7 +1,7 @@
 ---
-layout: pt/page
+layout: page
 title: Jamleon
-permalink: /pt/jogos/jamleon/
+permalink: /jogos/jamleon/
 comments: true
 ---
 

@@ -1,7 +1,7 @@
 ---
-layout: pt/page
+layout: page
 title: Argby
-permalink: /pt/jogos/argby/
+permalink: /jogos/argby/
 comments: true
 ---
 
