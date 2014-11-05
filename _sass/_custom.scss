@@ -1,0 +1,287 @@
+.list-style-none {
+    list-style: none;
+}
+.home-list {
+    border-bottom: 1px dashed rgba(209, 209, 209, 1);
+    padding: 1px 0px 3px;
+}
+.home-list:nth-last-child(1) {
+    border: none !important;
+}
+li.icons-footer {
+    padding-left: 15px;
+    float: left;
+    font-size: 1.3em;
+}
+.nav {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 3px;
+}
+ul.icons-footer {
+    text-align: center;
+}
+@media screen and (min-width: 450px) and (max-width: 48em) {
+    .site-nav {
+        position: absolute;
+        right: 20px;
+        top: 9px;
+    }
+}
+@media screen and (min-width: 640px) {
+    .float-right {
+        float: right;
+    }
+    .float-left {
+        float: left;
+    }
+}
+@media screen and (min-width: 436px) {
+    .float-right-footer {
+        float: right;
+    }
+    .float-left-footer {
+        float: left;
+    }
+}
+@media screen and (max-width: 425px) {
+    .float-right-footer {
+        margin-top: 10px;
+    }
+    .float-left-footer {
+        font-size: .8em;
+        margin-top: -10px;
+    }
+}
+@media screen and (min-width: 38em) {
+    .games-gallery {
+        width: 47%;
+    }
+    .game-description {
+        font-size: .9rem !important;
+    }
+    li.games-gallery:nth-child(even) {
+        margin-left: 6%;
+    }
+}
+@media screen and (max-width: 37.9em) and (min-width: 380px) {
+    .game-description {
+        font-size: 1.2rem !important;
+    }
+}
+@media screen and (min-width: 520px) and (max-width: 38em) {
+    .game-list-float-right {
+        float: right;
+    }
+    .game-list-float-left {
+        float: left;
+    }
+}
+@media screen and (max-width: 767px) {
+    .home-list {
+        margin-top: 7px;
+    }
+}
+canvas {
+    width: 100%;
+}
+img {
+    border-radius: 0.4em;
+}
+video {
+    border-radius: .4em;
+    margin-bottom: .5em;
+}
+.games-gallery {
+    float: left;
+    margin-bottom: 2rem;
+}
+.description-margin {
+    width: 96%;
+    margin: 0 auto 0 !important;
+}
+ul.game-list {
+    padding-bottom: 230px;
+    margin-bottom: 0 !important;
+}
+.game-description {
+    color: gray;
+    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+}
+.logo {
+    margin-left: -72px;
+    margin-top: -22px;
+}
+.no-border-radius {
+    border-radius: 0px !important;
+}
+.padding-left-zero {
+    padding-left: 0;
+}
+.link-homelist {
+    //font-weight: bold;
+    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+.mt2 {
+    margin-top: 0;
+}
+.site-nav {
+    margin-top: 1.5rem;
+}
+.blog-summary {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    color: #8a8a8a;
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+}
+a {
+    color: rgb(190, 49, 179);
+}
+a:hover {
+    color: rgb(255, 144, 251);
+}
+.highlight,
+.gist-syntax .highlight {
+    border-radius: 3px !important;
+}
+.icon-box {
+    background-color: rgba(201, 220, 222, 1);
+    border-radius: 5px;
+    padding: 1.4em;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.icon-box-last {
+    margin-right: 0px !important;
+}
+.hire-icon {
+    margin-bottom: 8px;
+}
+.full-width {
+    width: 100%;
+    display: inline-block;
+}
+@media screen and (min-width: 860px) {
+    .icon-box {
+        width: 21.2%;
+        float: left;
+        margin-right: 5%;
+    }
+    .form-float-left {
+        float: left;
+    }
+    .form-float-right {
+        float: right;
+        width: 65%;
+    }
+}
+.form-control {
+    font-size: 1.1rem;
+    padding: 10px;
+    border: medium none;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+.textarea {
+    width: 100%;
+    height: 150px;
+}
+.large-button {
+    width: 100%;
+    padding: 8px;
+    color: #FFF;
+    background-color: #7F9CAA;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+hr {
+    border-style: dashed;
+    border-bottom: none;
+    border-color: rgb(165, 194, 196);
+}
+#progressbar {
+    background-color: rgba(244, 244, 244, 0.69);
+    border-radius: 3px;
+    float: right;
+    width: 80%;
+    margin-left: 2%;
+}
+#progressbar > div {
+    height: 20px;
+    border-radius: 2px;
+}
+
+#progressbar > div.quarter {
+    width: 25%;
+        background-color: #cb55a7;
+
+}
+#progressbar > div.fifty {
+    width: 50%;
+        background-color: #9555cb;
+
+}
+#progressbar > div.three-quarters {
+    width: 75%;
+        background-color: #5563cb;
+
+}
+#progressbar > div.ninety {
+    width: 90%;
+        background-color: #55c2cb;
+
+}
+
+#progressbar > div.full {
+    width: 100%;
+        background-color: #55cb7e;
+
+}
+.proficiency {
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.64);
+    line-height: 20px;
+}
+.progress-span {
+    float: left;
+    width: 18%;
+    margin-top: -4px;
+    text-align: right;
+}
+
+@media screen and (max-width: 680px) {
+    .progress-span {
+    font-size: 1rem;
+}
+}
+
+@media screen and (max-width: 380px) {
+    .progress-span {
+    width: 33%;
+}
+    #progressbar {
+        width: 64%;
+    }
+
+    .proficiency {
+        color: rgba(0, 0, 0, 0);
+    }
+}
+.bar {
+    margin-bottom: 6px;
+    display: inline-block;
+    width: 100%;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+    text-align: right;
+}

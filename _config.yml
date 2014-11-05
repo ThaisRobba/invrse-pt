@@ -1,0 +1,18 @@
+# Site settings
+title: invrse - the game development blog
+email: ottorobba@gmail.com
+author: Otto Robba
+description: "Educational blog on game design and development, including topics like programming, tools, workflow and techniques."
+baseurl: ""
+url: "http://invrse.co/pt"
+google_analytics: UA-55865997-1
+animated: false
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+#paginate: 3
+sass:
+  compressed: true
+
+gems: [jekyll-sitemap]

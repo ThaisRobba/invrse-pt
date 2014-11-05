@@ -1,0 +1,96 @@
+---
+layout:     post
+title:      7 dicas para sobreviver game jams
+date:       2014-09-18 20:00:00
+permalink:  pt/sobrevivendo-game-jams
+categories: gamejam
+comments:   true
+---
+
+Participar em game jams pode ser bem desafiador (e exaustivo). Há muito o que se fazer e o prazo é bem mais curto do que inicialmente parece.
+
+Ao mesmo tempo, é uma experiência incrível e muito divertida na qual você conhece todo tipo de gente e jogos! Pra melhor aproveitar uma jam futura, aqui vão 7 dicas deste sobrevivente que vos fala.
+
+![Coding away!]({{site.baseurl}}/assets/computador_mesa.png)
+
+###1. Não chegue na hora. Chegue cedo!
+
+Chegar no local da jam *antes* dela começar te garante um espaço bom (meu time conseguiu um quadro negro e mesas espaçosas na última jam). Chegar cedo também te permite montar todas as máquinas, ajustar os detalhes e organizar a equipe.
+
+Por exemplo, na SPJam 2014, um dos membros da equipe estava com o Dropbox cheio. Como tínhamos tempo antes de começar a jam, foi possível pra ele criar uma nova conta e sincronizarmos todo mundo.
+
+Já viu, chegue cedo!
+
+###2. Use um sistema de revisão/sincronização
+
+Para uma game jam, não precisa ser um sistema mais complexo estilo Git - Dropbox funciona suficientemente bem e novatos conseguem entender e usar rapidinho.
+
+Para times com múltiplos programadores, eu sem dúvida iria de Git, usando ou <a href="http://www.github.com" target="_blank">Github</a> ou <a href="http://www.bitbucket.com" target="_blank">Bitbucket</a>.
+
+Usando Git e um bom editor (tal como [Atom]({{site.baseurl}}/pt/review-editor-atom)), fica fácil gerenciar o que está acontecendo.
+
+Se você usar Github e HTML5, é possível servir o jogo sem nem precisar de um servidor local! :D
+
+Aliás, é muito importante que seja fácil testar seu jogo por vários membros da equipe e que tudo seja acessível por todos.
+
+Durante a última jam, ter um sistema de compartilhamento permitiu que um dos membros da equipe, que ficou doente e trabalhou de casa, estivesse sempre a par do que acontece. Ele podia testar o jogo direto da casa dele. Os ilustradores podiam jogar suas imagens direto na pasta, substituindo os placeholders que eu deixava, atualizando o jogo sem que eu tivesse de recompilar ou coisa assim. Yay HTML5!
+
+###3. Arquivos temporários (placeholders) são seus amigos
+
+Eu cheguei na jam com algumas coisas básicas já feitas. Por exemplo, eu estruturei assim minha pasta de jogos:
+
+    SPJam 2014
+    ├── index.html
+    ├── src
+    |   ├── main.js
+    |   ├── load.js
+    |   ├── play.js
+    |   └── boot.js
+    ├── libs
+    |   └── phaser.js
+    ├── art
+    |   ├── progress_bar.png
+    |   └── placeholder.png
+    ├── work_assets
+    └── sounds
+    
+É pouca coisa, como dá pra ver, mas ajuda imensamente. Foi uma dor de cabeça a menos e economizou aí um tempinho pra equipe trabalhar no que de fato importava. Além disso, na hora que sincronizamos a pasta, todo mundo tinha uma estrutura clara para trabalhar.
+
+Ter arquivos de imagem em branco (um .png de 64x64 por exemplo) é ótimo - eu duplicava o arquivo, renomeava e pronto, podia usar no jogo. Daí era só um ilustrador substituir com a versão nova e pronto, já está in-game.
+
+A bagunça é seu pior inimigo, se organize antes pra não arrancar cabelos depois.
+
+###4. Coma de maneira saudável
+
+É *muito* fácil deixar se levar e comer só porcaria durante a jam. Não faça isso. Um biscoito aqui e acolá, tudo bem, mas você não quer ter ninguém passando mal, com dores e desconforto.
+
+Na SPJam, no último dia de Jam, a equipe inteira estava enjoada das junk foods, todo mundo querendo umas refeições mais normais (e quentes!). Meu conselho é levar alimentos saudáveis que duram bem fora da geladeira, coisas como sanduíches naturais, frutas, nozes, barrinhas de cereal e, se possível na hora de comer, peça comida (de verdade).
+
+###5. 48 horas? Não, isso é uma mentira e você deve ir dormir
+
+Nunca vi uma jam durar as benditas 48 horas. Geralmente vão começar um pouco atrasadas e, geralmente, vão encerrar um pouco cedo. Na última jam, em que fizemos o [Jamleon]({{site.baseurl}}/pt/jogos/jamleon/) gastamos, ao todo, 24 horas.
+
+"Mas são 48 horas! Eu vou tomar Redbull e fazer pilhado e virado!"
+
+A falta de sono é seu inimigo. Se você está cheio de cafeína, pare. Olha pro seu trabalho. Você não vai estar conseguindo fazer o seu melhor (nem ser o mais produtivo possível) porque o seu cérebro não aguenta.
+Vai pra casa, descansa, toma um banho. Faz um mundo de diferença.
+
+###6. Seu jogo deve ficar 'pronto' no sábado
+
+No primeiro dia de jam, geralmente uma sexta-feira, você e sua equipe fazem o brainstorm. Dessa 'pensação' toda, vocês escolhem uma ideia, refinam e partem prum protótipo.
+
+No sábado, a produção do jogo começa a todo vapor - é o dia com o maior número de horas úteis e, sem encerramento nem abertura, é o dia com menos distrações.
+
+No domingo, você quer resolver bugs, ajeitar o equilíbrio do jogo, melhorar as fases e afins, pura e tão somente.
+
+Claro que é possível terminar a jam com o jogo cheio de bugs mas é vital que a ideia do gameplay esteja clara, que a sua intenção e de sua equipe esteja nítida ali.
+
+Nossa equipe, na SPJam, por exemplo, podia ter feito melhor. Uma das mecânicas foi sofrida de implementar e acabamos não conseguindo fazer muito play testing - os níveis acabaram ficando muito fracos, sem nenhuma graça.
+
+###7. Vá. Participe.
+
+Você nunca sabe com quem você vai encontrar ou o que você vai conseguir fazer. Eu fico muito feliz com as jams que eu fui e quando estou nelas, estou no meu elemento. Fiz amizades com músicos, outros programadores e até mesmo as equipes que coordenavam os locais de jam.
+
+Pode confiar - você será mais feliz se estiver cercado de gente que ama jogos tanto quanto você <3
+
+Tem dicas para dar? Compartilhe-as abaixo!
