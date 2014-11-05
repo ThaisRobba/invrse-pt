@@ -67,7 +67,3 @@ Já usei o Atom pra escrever código em Lua, MoonScript, JavaScript, HTML, CSS e
 
 Levando isso em conta, como ele é gratuito, não há mal algum em experimentar.
 Aproveita e compartilha o que você achou e que [pacotes você considera essenciais]({{site.baseurl}}/atom-recommended-packages)!
-
-With all of that in mind, there really is no harm in trying Atom out - it is free and open source and you just might love it.
-
-If you have tried it, feel free to share your configuration and what [packages you deem essential]({{site.baseurl}}/atom-pacotes-recomendados). :)
