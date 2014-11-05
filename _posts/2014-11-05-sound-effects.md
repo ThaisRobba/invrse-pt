@@ -42,9 +42,9 @@ Foley. O termo é do inglês, bastante usado na área cinematográfica. Basicame
 
 Tá, isso foi uma simplificação exagerada mas os efeitos sonoros estão em todo lugar. Brinde dois copos de vidro, preste atenção no som. Será que dá pra usar num game? E se esfregar folhas de papel? Socar repolhos? E se der petelecos na bochecha para fazer som de água?
 
-Quando você começar a pensar que todo som vale, abre-se uma gama muito vasta de possibilidades. O vídeo abaixo (em inglês) mostra a fundo como funciona além de apresentar várias engenhocas usadas pros mais diversos sons.
+Quando você começar a pensar que todo som vale, abre-se uma gama muito vasta de possibilidades. O vídeo abaixo (em inglês com legendas em português) mostra a fundo como funciona além de apresentar várias engenhocas usadas pros mais diversos sons.
 
-<iframe width="100%" height="320" src="//www.youtube.com/embed/TSf8Er2gV_Q" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="320" src="//www.youtube.com/embed/0loaUFaredM" frameborder="0" allowfullscreen></iframe>
 <br>
 
 ###Audacity
