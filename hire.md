@@ -9,13 +9,13 @@ Estou disponível para:
 <div class="full-width">
 <div class="icon-box">
     <i class='fa fa-bolt fa-4x hire-icon'></i>
-    <h5>Trabalho Freelance</h5>
+    <h5>Freelance</h5>
     <small><span>Precisando de alguém por um tempo pra complementar seu time? Precisa de um jogo? Fale comigo!</span></small>
 </div>
 
 <div class="icon-box">
     <i class='fa fa-briefcase fa-4x hire-icon'></i>
-    <h5>Trabalho Contratado</h5>
+    <h5>Contratado</h5>
     <small><span>Precisa de alguém com experiência em HTML5 na sua equipe? Estou disponível para contratação!</span></small>
 </div>
 
