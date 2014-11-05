@@ -1,7 +1,7 @@
 ---
-layout: pt/game_page
+layout: game_page
 title: Jogos
-permalink: /pt/jogos/
+permalink: /jogos/
 comments: true
 ---
 

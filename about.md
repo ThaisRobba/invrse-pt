@@ -1,7 +1,7 @@
 ---
-layout: pt/page
+layout: page
 title: Como eu aprendi a não me preocupar e amar a bomba
-permalink: /pt/sobre/
+permalink: /sobre/
 ---
 
 Falar sobre si é sempre meio estranho, achei que podia ser uma boa tentar contar uma história, pode ser?

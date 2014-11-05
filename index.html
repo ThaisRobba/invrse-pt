@@ -1,5 +1,5 @@
 ---
-layout: pt/default
+layout: default
 ---
 <div class="blog-summary">
     <span>Através das palavras deixei tudo que me era familiar para trás - agora, restamos só eu e a máquina.</span>
@@ -9,7 +9,6 @@ layout: pt/default
 
     <ul class="padding-left-zero">
         {% for post in site.posts %}
-            {% if post.lang == 'pt' %}
             <li class="list-style-none home-list"><a class="link-homelist" href="{{ post.url }}">{{ post.title }}</a>
                 <p class="post-meta float-right">{{ post.date | date: "%b %-d, %Y" }}</p>
             </li>
