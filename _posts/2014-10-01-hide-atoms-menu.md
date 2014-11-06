@@ -1,41 +1,33 @@
 ---
 layout: post
-title: Hide Atoms menu under Linux or Windows
+title: Esconder menus do Atom
 date: 2014-10-01 10:00
-permalink: pt/hide-atoms-menu
+permalink: esconder-menu-atom
 categories: 
     - text editor
 comments: true
-lang:       pt
 ---
 
-If you are anything like me than you enjoy using well designed, aesthetically pleasing tools. Then again, I get a fuzzy feeling when the software that I use matches my system and looks deeply integrated - I'm weird like that.
+Eu sou daquelas pessoas que se sente feliz usando ferramentas bem feitas - usar programas que integram harmonicamente com o sistema, que funcionam como esperado é, ao meu ver, algo belo.
 
-Atoms menus under Linux, however, are not pleasing and don't mesh well with Gnome, Cinnamon or the other non-Unity desktop environments.
+Quando eu uso o Atom, no entanto, me dá uma tristeza a feiúra desnecessária dos menus.
 
 ![Awful menus must die]({{site.baseurl}}/assets/atom/with_menu.png)
 
 
-###Rearranging the atoms
+###Rearrumando átomos
 
-I seldom use menus. Not only do I find them ugly and out of place but I also prefer a keyboard driven workflow whenever possible. With Atoms command runner, I really never need to use a menu at all.
+Em certos aplicativos, menus fazem sentido. No caso do Atom, com a paleta de comandos, eles parecem largamente irrelevantes.
 
-
-Github user '[devinceble](https://gist.github.com/devinceble/a0f3598cecf30cc6ab21)' found a nice, albeit hacky, way to hide the menus.
-
-There is, however, a better way to do it, as discussed in Atoms [issue #2914](https://github.com/atom/atom/issues/2914) by [user dajester2013](https://github.com/atom/atom/issues/2914#issuecomment-56667810).
-
-###Let's do the dirty work
-
-Open up a terminal window (**Ctrl+Alt+T** in Ubuntu based distros) and paste the following:
+Abra uma janela do terminal e cole o código a seguir:
 
     sudo gedit '/opt/atom/resources/app/src/browser/atom-window.js'
 
-**Note:** Replace gedit with whatever editor you want to use
+**Nota:** Substitua o gedit pelo editor que você preferir utilizar
 
-**Note for Windows users:** Atom *should* be installed under C:\Programs or something like that and the internal folder structure should be the same.
+**Nota para usuários do Windows:** A pasta do Atom deve estar instalada em  C:\Arquivos de Programas ou similar.
 
-Find the entry below:
+No arquivo atom-window.js, ache o código abaixo:
 
 {% highlight javascript %}
 this.browserWindow = new BrowserWindow({
@@ -48,7 +40,8 @@ this.browserWindow = new BrowserWindow({
   });
 {% endhighlight %}
 
-And replace it with this:
+E substitua-o pelo código abaixo:
+
 {% highlight javascript %}
 this.browserWindow = new BrowserWindow({
         show: false,
@@ -61,12 +54,10 @@ this.browserWindow = new BrowserWindow({
       });
 {% endhighlight %}
 
-###This feels wrong
+###Que trabalheira!
 
-Ideally, it should be an option for Atom to hide or show the menu, just like pretty much everything else is already. Until someone commits the needed changes though, this is one of the ways to do it. On the plus side, you retain *some* menu functionality. Pressing **ALT** reveals Atoms menus - at least on Linux.
-
-I find that the end result is worth the minute you spend modifying the source.
+Num mundo ideal, o editor deveria vir com a opção de esconder/mostrar o menu. Até alguém colocar isso no código final, essa é a opção que temos. No lado positivo, apertando a tecla **ALT** você retoma a funcionabilidade do menu.
 
 ![Beauty incarnate]({{site.baseurl}}/assets/atom/without_menu.png)
 
-Bear in mind that you will need to do this again when Atom gets updated.
+Tenha em mente que será necessário refazer isso a cada atualização do Atom.
