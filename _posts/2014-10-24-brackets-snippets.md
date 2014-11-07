@@ -2,68 +2,46 @@
 layout:     post
 title:      Brackets & Snippets
 date:       2014-10-24 20:00:00
-permalink:  pt/brackets-snippets
+permalink:  brackets-snippets
 categories: 
 - resource
 - text editor
 comments:   true
-lang:       pt
 ---
 
-One of the major features missing in <a href="http://brackets.io" target="_blank">Adobe's Brackets</a> is a snippet completion system. For many (myself included), they are a must have on any code editor - once you get used to them, it is hard to go back.
+Uma das coisas que eu mais sinto falta no <a href="http://brackets.io" target="_blank">Brackets</a> é um sistema para criar "code snippets" (blocos de código).
 
-###Snip what?
-
-Snippets are smaller pieces of text that expand into larger blocks on a keypress.
+###Snip quem?
 
 ![Snippets completion example]({{site.baseurl}}/assets/brackets/what_is_a_snippet.gif)
 
-They make tedious parts of certain languages and frameworks much more bearable - automation on a microscopic scale!
+Veja-os como blocos de código pré-prontos, pra evitar o tédio de certas funções e afins.
+Funcionam com base em pedaços menores de texto que podem ser expandidos - poupando tempo e sanidade!
 
-###1st Option
+###Conheça Emmet
 
-<a href="https://github.com/jrowny/brackets-snippets" target="_blank">Jrowny</a> made a nice snippets completion system for Brackets - it is not very conventional but allows for a few cool things, like an inline completion that matches Brackets' quick edit visuals.
-
-![Brackets Snippets]({{site.baseurl}}/assets/brackets/brackets_snippets.gif)
-
-
-<a href="https://github.com/zaggino/brackets-snippets" target="_blank">Zaggino updated it a bit</a> and I even contributed better JavaScript definitions to it but this extension has quite a few downsides:
-
-- Can't use snippets on a non-empty line
-- **Tab** key doesn't work properly
-- Shortcut is awkward (**Ctrl+Alt+Space**)
-- Hard to add new snippets
-- Doesn't work well with multiple input
-- Has issues with indentation
-- It is no longer maintained
-
-This led me to seek a different solution.
-
-###2nd Option: Meet Emmet
-
-Emmet is famous with front-end developers, it greatly simplifies creation of HTML by providing a lot of sane defaults. In essence, it is a snippets system on steroids (though they call it zen coding).
+Emmet é um sistema bastante famoso entre desenvolvedores front-end - ele simplifica muito a programação de arquivos HTML trazendo uma série de facilidades. Em essência, é um sistema de snippets anabolizado.
 
 ![emmet gone crazy]({{site.baseurl}}/assets/brackets/emmet_expand.gif)
 
-Using Emmet for anything other than HTML/CSS, however, is not as common practice as one would think. It is possible and, in being so, I decided to give it a try with JavaScript. It is not perfect but it has some awesome features:
+É raro ver Emmet ser usado para coisas fora do reino do HTML/CSS mas é claramente possível, então eu decidi ver o que acontecia ao usá-lo com JavaScript. Não é perfeito mas tem algumas coisas muito legais.
 
 ![emmet and javascript]({{site.baseurl}}/assets/brackets/js_snippets.gif)
 
-- Uses **Tab** to expand snippets
-- Accepts a text parameter wrapped by curly braces
-- Easy to create new snippets
-- Hashtag and dot can be used to pre-emptively fullfil snippets
-- Can expand one snippet into multiple blocks
+- Usar tecla **Tab** para expandir os blocos de código
+- Aceita parâmetros especiais com o sustenido (#) e ponto.
+- É fácil criar novos snippets
+- Pode expandir um único trecho em muitos blocos
 
-In order to install Emmet in Brackets, just search for it in the extension manager.
-I highly recommend reading the <a href="http://docs.emmet.io/" target="_blank">documentation</a> on the official site to better understand what Emmet can really do.
+Para instalar Emmet no Brackets, basta procurar por ele no gerenciador de extensões.
+Eu recomendo uma leitura rápida da <a href="http://docs.emmet.io/" target="_blank">documentação</a> do Emmet para entender melhor como ele funciona.
 
-###Free as in Freedom
+###Livre como Liberdade
 
-I made my <a href="https://github.com/OttoRobba/javascript-emmet" target="_blank">configuration files available at GitHub</a> but you can also [download them here!](https://github.com/OttoRobba/javascript-emmet/archive/master.zip)
+Eu fiz arquivos de configuração especiais pro Brackets, você pode <a href="https://github.com/OttoRobba/javascript-emmet" target="_blank">vê-los no Github</a> ou  [baixá-los aqui!](https://github.com/OttoRobba/javascript-emmet/archive/master.zip)
 
-You can set the folder from which Emmet reads snippets by going to the menu entry Emmet > Preferences and typing the path to where you saved the snippets/config files.
+Depois que você descompactar o arquivo em algum lugar, é só abrir no menu Emmet > Preferences e colocando o endereço da pasta extraída.
 
-I'm creating another set of snippets specifically for Phaser but that is nowhere near ready yet.
+Estou desenvolvendo uma outra versão especificamente para Phaser mas não está pronta ainda.
 
-Let me know if this is helpful or if you have any suggestions, comments or ideas :)
+Se isso te ajudou, se você tiver comentários ou ideias, sinta-se a vontade para contribuir!
