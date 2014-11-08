@@ -1,72 +1,71 @@
 ---
 layout:     post
-title:      Phaser Review - HTML5 Game Framework
+title:      Phaser - HTML5 Game Framework
 date:       2014-10-10 12:00:00
-permalink:  pt/phaser-review
+permalink:  phaser-review
 categories: 
     - review
     - game framework
 comments:   true
-lang:       pt
 ---
 
-Let's be honest: game design is fun but it is also very hard and a lot of work.
+Vamos ser honestos: game design é *muito* divertido mas é um trabalho difícil e complexo.
 
-I'm always in favor of tools that make development easier and faster without compromising quality - <a href="http://phaser.io" target="_blank">Phaser</a> is one such tool.
+Eu sempre favoreço ferramentas que tornam o processo de desenvolvimento mais fácil e mais rápido sem comprometer a qualidade - <a href="http://phaser.io" target="_blank">Phaser</a> é uma dessas ferramentas.
 
-It is an HTML5 game framework developed in Javascript, built by <a href="http://www.photonstorm.com/" target="_blank">people smarter than me</a> (and who have been at this for much longer than me).
+É um game framework (estrutura base de jogo, em tradução livre) para jogos em HTML5. É todo feito em JavaScript por <a href="http://www.photonstorm.com/" target="_blank">gente muito mais inteligente do que eu</a> (e que estão fazendo isso há bastante tempo).
 
 ![Phaser logo]({{site.baseurl}}/assets/phaser_logo.jpg)
 
-###Cross Platform & Performant
+###Veloz & multi-plataforma
 
-One of the coolest things about HTML5 game frameworks is, obviously, that they run on browsers. Phaser does a fantastic job of supporting all major vendors and of running flawlessly even on mobile browsers (which are a special kind of pain).
+Uma das coisas mais legais de game frameworks HTML5 é que, óbvio, eles rodam em browsers. Phaser faz um trabalho fantástico de integração com os browsers, rodando perfeitamente até mesmo nos navegadores de mobiles (que são especialmente infernais).
 
-This performance is achieved due to continuous benchmarking of the framework along with it being built on top of PixiJS - bar none the best 2D webGL renderer available. Basically, it is really fast.
+Essa performance é obtida graças ao contínuo trabalho no framework e ao fato do mesmo ser construído em cima do PixiJS - sem dúvida o melhor renderizador 2D pra webGL no momento. Basicamente, é tudo bem rápido.
 
-Using the PixiJS's benchmark tool, <a href="http://www.goodboydigital.com/pixijs/bunnymark/" target="_blank">BunnyMark</a>, I get about 100,000 bunnies running smoothly at 30fps (Firefox, Ubuntu, using a GTX650 Ti). I don't even know what to do with this many bunnies.
+Usando a ferramenta benchmark (análise de performance) do PixiJS, <a href="http://www.goodboydigital.com/pixijs/bunnymark/" target="_blank">BunnyMark</a>, eu consigo por volta de 100,000 coelhos rodando lisinho em 30 frames por segundo (Firefox, Ubuntu, using a GTX650 Ti). Nem sei o que fazer com tantos coelhos.
 
 ![bunnies everywhere]({{site.baseurl}}/assets/phaser_bunnymark.png)
 
-Even on mobiles the performance is pretty good. My Galaxy S2 handles 512 bunnies at 30fps on Google's Chrome browser - and that is using the canvas fallback (which is noticeably slower).
+Até nos aparelhos móveis roda tudo direitinho. Meu Galaxy S2 consegue uns 512 coelhos em 30fps no Google Chrome - ele não suporta WebGL então acaba rodando em canvas (que é mais lento).
 
-###Cool features
+###Características
 
-Besides being a speed demon, Phaser has plenty of useful features, below are a few that merit extra attention:
+Além de ser veloz e furioso, Phaser tem várias coisas úteis. Seguem abaixo algumas dignas de atenção:
 
-- #####Flexible
+- #####Flexivél
+    
+    É "apenas JavaScript" e é open source.
+    
+    O código fonte é fácil de ler e entender e <a href="https://github.com/photonstorm/phaser
+" target="_blank">está disponível no GitHub</a> - alterações, patches e afins são bem vindos.
 
-    It is "just Javascript" and it is open source.
+    Você pode também extender o Phaser com plugins!
+    
+- #####Suporte a Tilemaps e Tiled
 
-    The source code is easy to read and <a href="https://github.com/photonstorm/phaser
-" target="_blank">is available on GitHub</a> - pull requests are, of course, welcome.
-
-    You can also extend Phaser with plugins.
-
-- #####Tilemap (and Tiled) support
-
-    <a href="http://www.mapeditor.org/" target="_blank">Tiled</a> is an amazing 2D, open source mapping tool. Integration with Phaser is dead easy.
+    <a href="http://www.mapeditor.org/" target="_blank">Tiled</a> é uma ferramenta open-soruce incrível para a criação de mapas 2D. Integrar com Phaser é muito fácil.
 
     ![tiled integration]({{site.baseurl}}/assets/phaser_tiled.gif)
 
-    I used it with my team on the last jam I went to and they quickly adapted to it - instead of manually coding the levels I was free to work on different areas of the game.
+    Eu e meu time o usamos na SPJam 2014. Todos se adaptaram rapidamente à ferramenta, me deixando livre para focar noutras áreas do jogo enquanto eles faziam os níveis.
 
-- #####Physics
+- #####Física
+    
+    Phaser vem com 3 escolhas diferentes para sistemas de física, desde o mais básico e mais veloz 'Arcade' até o mais completo e avançado 'P2'.
+    
+    As funções da biblioteca de física são extremamente úteis e simplificam (e muito) o trabalho necessário nos jogos.
+    
+    A biblioteca 'Arcade' tem, por exemplo, uma função que checa se o sprite está tocando o chão, retornando um valor booleano, tornando muito fácil evitar pulos infinitos em jogos plataforma.
+    
+- #####Camera, Sprites, Animação & Partículas
 
-    Phaser comes with 3 different choices for physics systems, from the more basic, lightweight 'Arcade' to the full-featured and advanced 'P2'.
-
-    The functions that can be used with the physics libraries are extremely useful and greatly simplify the work needed for all kinds of games.
-
-    For example, 'Arcade' has a function that checks if a sprite is touching the ground, making it simple to avoid infinite jumping in the air on platform games.
-
-- #####Camera, Sprites, Animation & Particles
-
-    Not only are this systems quite powerful but they save a lot of time that would be otherwise spent reinventing the wheel.
-
-    Phaser takes full advantage of Javascripts prototypical object-oriented nature. Sprites, for example, are spawned with a host of properties that make it easy to interact with them.
+    São sistemas por si só bastante poderosos e capazes que te poupam muitas horas que seriam investidas reinventando a roda.
+    
+    Phaser aproveita por completo a natureza prototípica orientada a objetos do JavaScript. Sprites, por exemplor, herdam uma série de propriedades que torna muito mais fácil interagir com eles.
 
     {% highlight javascript %}
-//silly example using only built-in properties and methods
+//exemplo simples mostrando as propriedades e métodos padrão
 
 if (sprite.alive && sprite.overlap(spikes)) {
     sprite.damage(1);
@@ -74,39 +73,38 @@ if (sprite.alive && sprite.overlap(spikes)) {
     {% endhighlight %}
 
 
-###Documentation
+###Documentação
 
-I'm not a Javascript expert - at best, I'm competent with it. I do feel a bit like Alice going down the rabbit hole when I need to read <a href="http://docs.phaser.io" target="_blank">Phaser's documentation</a>.
+Eu não sou um expert de JavaScript - na melhor das hipóteses, sou proficiente. A <a href="http://docs.phaser.io" target="_blank">documentação do Phaser</a> sempre me dá uma certa sensação de ser a Alice descendo a toca do coelho.
 
-"Ok, Game is the parent object, add is a property of it that references GameObjectFactory. The latter has a method called image, so if I need to add one, I need to input..."
+"Tá, 'Game' é o objeto pai, 'add' é uma propriedade dele que referencia o 'GameObjectFactory'. Este último tem um método chamado 'image', então se eu quiser adicionar uma imagem preciso escrever..."
 
         game.add.image(x, y, key, frame, group);
 
-This feels, to me, counterintuitive. My first instinct would be going to the Image class in the documentation but that wouldn't really help.
+Isso, para mim, é contra-intuitivo. Meu primeiro instinto seria ir direto na classe 'Image' na documentação mas isso não necessariamente ajudaria.
 
-Once I "got it", however, I begun to understand all the praise that it gets.
+Depois que a ficha caiu, eu consegui compreender todos os elogios que a documentação recebe.
 
-###Community
+###Comunidade
 
-Active and in growth, Phaser's community is a good sign of how healthy the framework is and how far it can go.
+Ativa e em crescimento, a comunidade do Phaser é um bom sinal do quão saudável o framework está e quão longe ele pode ir.
 
-The <a href="http://www.html5gamedevs.com/forum/14-phaser/" target="_blank">forums</a> are bustling with activity, with members contributing really cool tools and plugins.
+Os <a href="http://www.html5gamedevs.com/forum/14-phaser/" target="_blank">fóruns</a> tem atividade constante, com os usuários contruindo com dúvidas, respostas, plugins e afins.
 
-Richard, the creator of Phaser, often replies on the forums so that is a big plus as well.
+Richard, o criador do Phaser, costuma inclusive responder nos tópicos, o que é por si só um benefício extra.
 
 ![community]({{site.baseurl}}/assets/phaser_community.png)
 
-###Extra resources
+###Recursos extras
 
-Phaser has an awesome directory of <a href="http://examples.phaser.io" target="_blank">examples</a> - you can probably make most games simply by browsing and learning from the code that you see here.
+O framework conta também com um diretório repleto de <a href="http://examples.phaser.io" target="_blank">exemplos</a> - você consegue fazer vários jogos simples lendo e aprendendo do código ali disponível.
 
-There is also a forum topic for <a href="http://www.html5gamedevs.com/topic/4320-list-of-phaser-tutorials/page-1" target="_blank">Phaser tutorials</a> and a <a href="https://github.com/photonstorm/phaser/wiki" target="_blank">wiki section on Github</a> - all very useful!
+Há também um tópico no fórum com <a href="http://www.html5gamedevs.com/topic/4320-list-of-phaser-tutorials/page-1" target="_blank">tutoriais de Phaser</a> e uma <a href="https://github.com/photonstorm/phaser/wiki" target="_blank">seção wiki no Gihub</a>.
 
-###Final take
+###Conclusão
 
-Phaser is a framework with a great focus on speed - both performance and development-wise. I feel productive and I feel I'm improving faster than I expected.
+Phaser é um framework com grande ênfase em velocidade - tanto em termos de performance como de desenvolvimento. Eu sinto que consigo ser bastante produtivo e que estou evoluindo rapidamente.
 
-With widespread adoption and really nice support, it is likely it will last for *many* years to come, I'm at ease that it won't stop working or disappear overnight.
+Conforme a adoção amplia e graças ao suporte existente, eu acredito que ele vai durar e crescer ao longo dos anos. Eu fico tranquilo que ele não vai desaparecer do dia pra noite.
 
-All in all, I highly recommend it!
-
+Tem a minha recomendação!
