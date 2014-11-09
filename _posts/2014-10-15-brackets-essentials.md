@@ -1,104 +1,102 @@
 ---
 layout:     post
-title:      8 essential extensions for Brackets
+title:      8 extensões essenciais pro Brackets
 date:       2014-10-15 20:00:00
-permalink:  pt/brackets-essential-extensions
+permalink:  brackets-extensoes-essenciais
 categories: 
     - text editor
 comments:   true
-lang:       pt
 ---
 
-Sorting through Brackets' extensions can be a bit of a pain - there are just so many and the native system for searching is very primitive. After viewing different plugins for hours, here is my list of essentials:
+O repositório de extensões do Brackets é enorme e separar o joio do trigo não é tarefa fácil dada a ferramenta de busca não tão evoluida. Depois de testar e pesquisar bastante, eu compilei uma lista das minhas favoritas que, eu acredito, são essenciais para todos os desenvolvedores de jogos.
+
 
 ###1. Extension Rating
 ![Extension Rating]({{site.baseurl}}/assets/brackets/extension_rating.png)
 
-This nifty package makes the process of discovering new extensions much better. It fetches and displays data like number of downloads, number of forks, assigns badges (top, trending, popular, etc...) and also gives a new selector that allows sorting the extensions by things like most downloaded, last updated and whatnot.
+Esse pacote torna o processo de descoberta de novas extensões uma moleza. Ele busca e apresenta informações como número de downloads, data de atualização, data de lançamento, ele designa etiquetas (top, trending, popular, etc...) e mostra um seletor para filtrar mais facilmente a busca.
 
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     Extensions-Rating
 
 ###2. Brackets Git
 ![Extension Rating]({{site.baseurl}}/assets/brackets/git.png)
 
-This is probably the nicest experience I've had with git. It integrates perfectly into Brackets, is very powerful and stupidly easy to use. 
+Essa é provavelmente a melhor experiência que eu já tive com Git. O pacote integra-se perfeitamente com o Brackets, é muito poderoso e estupidamente fácil de usar.
 
-Seriously. It has sane defaults that are likely to be enough for 95% of people who use git. For those who need more advanced git commands, it allows opening a command line directly inside the project's directory. 
+Sério. Eu me sentiria confortável ensinando um novato a usar Git através do Brackets (e confiaria na pessoa ainda por cima).
 
-I would feel comfortable teaching a newbie to use git through this, can't recommend it enough.
+A extensão tem padrões bons, suficientes para 98% das pessoas que usam o sistema e permite, pros mais avançados, abrir o terminal de comando direto no diretório do projeto.
 
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     brackets-git martin
     
 ###3. Console Plus
 ![Extension Rating]({{site.baseurl}}/assets/brackets/console_plus.png)
 
-This package is awesome because it fixes the only downside of using Bracket's Live preview with game development. Any JS errors you get from your game will be neatly displayed inside the editor, with nice information on the culprit. Cool!
+Essa extensão é muito útil porque ela facilita num dos pontos mais chatos do Live Preview do Brackets. Basicamente, todo e qualquer erro que você tiver do seu jogo vai aparecer nesse console - o arquivo onde está o erro é clicável então você rapidinho chega no culpado.
 
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     console-plus
     
 ###4. JSHint
 
-Brackets comes with JSLint enabled by default - while it is a good linting system, I'm not fond of how restrictive it is.
+Brackets vem com o JSLint por padrão - é um ótimo sistema de linting mas não necessariamente o meu favorito.
 
-Installing JSHint is easy and you can configure a .jshintrc file in the project root so that every file will be linted accordingly.
+Instalar o JSHint é fácil com esse pacote e você pode configurar um arquivo .jshintrc na raíz do projeto, pra garantir que suas opções sejam honradas no projeto todo.
 
-Bonus: sharing the .jshintrc file will mean that everybody is using the same rules.
+Bônus: Compartilhar o arquivo .jshintrc com sua equipe garante um código homogêneo.
 
-My .jshintrc for working with Phaser is like this:
+Meu .jshintrc para trabalhar com Phaser é assim:
 
     {
         "undef": false,
         "unused": false
     }
 
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     JSHint raymond
 
 ###5. Interactive Linter
 ![Extension Rating]({{site.baseurl}}/assets/brackets/linting.gif)
 
-Ah yes, now we are talking. Why waste time opening a new panel if we can use inline indicators right?
+Agora sim! Pra que perder tempo decifrando informações num painel se podemos usar indicadores direto na linha onde existe o erro? Baixe, use, ame.
 
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     interactive-linter
 
 ###6. JSBeautifier
 ![Extension Rating]({{site.baseurl}}/assets/brackets/beautify.gif)
 
-The easiest way to ensure a style - just tick the "Beautify on Save" box inside the "Edit" menu and you will never have to worry about it again.
+A maneira mais fácil de garantir um estilo claro e homogêneo - após instalar a extensão, é só ir no menu Edit > Beautify on Save. Pronto, agora é só trabalhar normalmente e tudo sempre ficará organizado!
 
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     jsbeautifier
 
 ###7. Zen Pane
 ![Extension Rating]({{site.baseurl}}/assets/brackets/zenpane.gif)
 
-Brackets just implemented a split view system - which is really useful but, as it is, it can be a bit confusing knowing which window is currently selected.
+Brackets (versão 1.0) acabou de implementar a opção de visualizar dois arquivos ao mesmo tempo - útil mas não está perfeira. Essa extensão deixa um tanto mais claro em qual arquivo você está mexendo e evita erros bestas.
 
-This package fixes that by reducing the opactiy for the non-selected window.
-
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     zen-pane
     
 ###8. Code Folding
 ![Code folding]({{site.baseurl}}/assets/brackets/code_folding.png)
 
-Brackets doesn't have code folding by default - they plan to implement it but this extension should scratch the itch while we paciently wait.
+Por padrão, Brackets não tem como dobrar blocos de código (code folding) - é algo que está planejado mas, pelo menos por enquanto, essa extensão quebra esse galho.
 
-In the extension manager search for:
+No gerenciador de extensões, procure por:
 
     code-folding
     
-###What about you?
+###E você
 
-Are these helpful to your workflow? What else do you use?
+Essas extensões te ajudam? O que mais você usa?
