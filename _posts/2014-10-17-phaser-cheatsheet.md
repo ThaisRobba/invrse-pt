@@ -18,10 +18,10 @@ Cada parte da cola é associada diretamente com partes da documentação pra fac
 <small>Referência: <a href="http://docs.phaser.io/Phaser.Game.html#Game" target="_blank">http://docs.phaser.io/Phaser.Game.html#Game</a></small>
 
 {% highlight javascript %}
-var game = new Phaser.Game(largura, altura, renderizador, "div_pai");
-//Todos os parâmetros são opcionais (e existem outro além desse)
+//Todos os parâmetros são opcionais (e existem outro além desses)
 //Geralmente queremos pelo menos a altura e largura.
 //Lembre-se que essa variável herdará uma série de propriedades e funções.
+var game = new Phaser.Game(largura, altura, renderizador, "div_pai");
 {% endhighlight %}
 
 ###Criando um estado de jogo (game state)
@@ -153,7 +153,8 @@ function create() {
 <small>Referência: <a href="https://github.com/photonstorm/phaser/wiki/Graphics" target="_blank">https://github.com/photonstorm/phaser/wiki/Graphics</a></small>
 
 {% highlight javascript %}
-//Objetos tem uma propriedade de âncora que vai de 0 (topo esquerdo) até 1 (canto inferior direito)
+//Objetos tem uma propriedade de âncora
+//Ela vai de 0 (topo esquerdo) até 1 (canto inferior direito)
 //O padrão é 0,0 mas é fácil mudar
 image.anchor.x = 0.2;
 image.anchor.y = 1;
