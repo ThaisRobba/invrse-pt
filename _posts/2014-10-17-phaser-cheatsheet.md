@@ -1,67 +1,66 @@
 ---
 layout:     post
-title:      Phaser Cheatsheet
+title:      Cola do Phaser
 date:       2014-10-17 20:00:00
-permalink:  pt/phaser-cheatsheet
+permalink:  cola-phaser
 categories:
     - game framework
     - resource
 comments:   true
-lang:       pt
 ---
 
-<a href="http://phaser.io" target="_blank">Phaser</a> - the HTML5 game framework that [I've reviewed](http://invrse.co/phaser-review) - is pretty easy to use. It gets even easier with a cheatsheet though.
+<a href="http://phaser.io" target="_blank">Phaser</a> - o game framework para HTML5 [que eu analisei]({{site.baseurl}}/phaser-review) - é bem fácil de user. Mas com uma colinha, fica mais fácil ainda.
 
-I'm linking each cheat directly to the documentation so you can see the related methods and the source if you need to.
+Cada parte da cola é associada diretamente com partes da documentação pra facilitar o aprendizado.
 
-###Starting a new game
+###Criando um jogo
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Game.html#Game" target="_blank">http://docs.phaser.io/Phaser.Game.html#Game</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Game.html#Game" target="_blank">http://docs.phaser.io/Phaser.Game.html#Game</a></small>
 
 {% highlight javascript %}
-var game = new Phaser.Game(width, height, renderer, "parent");
-//All parameters are optional but you usually want to set width and height
-//Remember that the game object inherits many properties and methods!
+var game = new Phaser.Game(largura, altura, renderizador, "div_pai");
+//Todos os parâmetros são opcionais (e existem outro além desse) mas geralmente queremos pelo menos a altura e largura.
+//Lembre-se que essa variável herdará uma série de propriedades e funções.
 {% endhighlight %}
 
-###Creating a game state object
+###Criando um estado de jogo (game state)
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.State.html" target="_blank">http://docs.phaser.io/Phaser.State.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.State.html" target="_blank">http://docs.phaser.io/Phaser.State.html</a></small>
 
 {% highlight javascript %}
 playState = {
     init: function() {
-    //Called as soon as we enter this state
+    //Chamada assim que entramos nesse estado
     },
 
     preload: function() {
-    //Assets to be loaded before create() is called
+    //Recursos que devem ser carregados antes de chamar create()
     },
 
     create: function() {
-    //Adding sprites, sounds, etc...
+    //Adicionar sprites, sons, etc...
     },
 
     update: function() {
-    //Game logic, collision, movement, etc...
+    //Lógica do jogo, colisão, movimento, etc...
     }
 };
 {% endhighlight%}
 
-###Managing game states
-<small>Reference: <a href="http://docs.phaser.io/Phaser.StateManager.html" target="_blank">http://docs.phaser.io/Phaser.StateManager.html</a></small>
+###Gerenciando estados de jogo
+<small>Referência: <a href="http://docs.phaser.io/Phaser.StateManager.html" target="_blank">http://docs.phaser.io/Phaser.StateManager.html</a></small>
 
 {% highlight javascript %}
 game.state.add('play', playState);
 game.state.start('play');
 
-//It also has functions useful for debugging and whatnot
-console.log("Currently at the "+ game.state.getCurrentState() +" game state!");
+//O StateManager também tem algumas funções de uso diverso, úteis também para debugging
+console.log("Atualmente no estado de jogo: "+ game.state.getCurrentState());
 {% endhighlight%}
 
-###Adjusting the game to any screen size
+###Ajustar o jogo a qualquer tamanho de tela
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.ScaleManager.html" target="_blank">http://docs.phaser.io/Phaser.ScaleManager.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.ScaleManager.html" target="_blank">http://docs.phaser.io/Phaser.ScaleManager.html</a></small>
 
 
 {% highlight javascript %}
@@ -71,42 +70,41 @@ this.scale.pageAlignVertically = true;
 this.scale.setScreenSize(true);
 {% endhighlight %}
 
-###Working with globals
+###Usando globais
 
-<small>Reference: <a href="http://www.html5gamedevs.com/topic/4247-where-to-put-global-var-in-the-basic-template/" target="_blank">http://www.html5gamedevs.com/topic/4247-where-to-put-global-var-in-the-basic-template/</a></small>
+<small>Referência: <a href="http://www.html5gamedevs.com/topic/4247-where-to-put-global-var-in-the-basic-template/" target="_blank">http://www.html5gamedevs.com/topic/4247-where-to-put-global-var-in-the-basic-template/</a></small>
 
 {% highlight javascript %}
-//Declare it outside of any functions
-//This way they persist through state changes
+//Declare-as fora que qualquer função
 game.global = {
     mute: false,
     score: 0,
     bestScore: 100
 };
 
-//Then we can change them anywhere
+//Porque aí podemos chamá-las em qualquer estado
 game.global.mute = true;
 game.global.bestScore = game.global.score;
 {% endhighlight %}
 
-###Using local storage
+###Usando armazenagem local
 
-<small>Reference: <a href="http://www.w3schools.com/html/html5_webstorage.asp" target="_blank">http://www.w3schools.com/html/html5_webstorage.asp</a></small>
+<small>Referência: <a href="http://www.w3schools.com/html/html5_webstorage.asp" target="_blank">http://www.w3schools.com/html/html5_webstorage.asp</a></small>
 
 {% highlight javascript %}
-//It can only store strings
+//Só é possível guardar strings
 localStorage.setItem('itemKey', 'myContent');
 
-//You can store entire objects by doing this:
+//Mas é possível guardar objetos inteiros fazendo isso:
 localStorage.setItem('myObject', JSON.stringify(myObject));
 
-//Then you just get the string you stored!
+//Depois que armazenar, é só pedir a string de volta
 localStorage.getItem('itemKey');
 {% endhighlight %}
 
-###Loading an image/music/asset
+###Carregado uma imagem/música/recurso
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Loader.html" target="_blank">http://docs.phaser.io/Phaser.Loader.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Loader.html" target="_blank">http://docs.phaser.io/Phaser.Loader.html</a></small>
 
 {% highlight javascript %}
 function preload() {
@@ -116,45 +114,46 @@ function preload() {
 }
 {% endhighlight %}
 
-###Setting a background color
+###Definindo uma cor de fundo
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Stage.html" target="_blank">http://docs.phaser.io/Phaser.Stage.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Stage.html" target="_blank">http://docs.phaser.io/Phaser.Stage.html</a></small>
 
 {% highlight javascript %}
-//Setting it to a nice, greyish blue
+//Escolhi um azul acizentado
 game.stage.backgroundColor = '#6d94b5';
 {% endhighlight %}
 
 
-###Generating random numbers
+###Gerando número aleatórios
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.RandomDataGenerator.html" target="_blank">http://docs.phaser.io/Phaser.RandomDataGenerator.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.RandomDataGenerator.html" target="_blank">http://docs.phaser.io/Phaser.RandomDataGenerator.html</a></small>
 
 {% highlight javascript %}
 var num = game.rnd.integerInRange(120, 480);
 var intNum = game.rnd.integer();
 var fracNum = game.rnd.frac();
+//Dentre outras!
 {% endhighlight %}
 
-###Adding game objects
+###Adicionando objetos de jogo
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.GameObjectFactory.html" target="_blank">http://docs.phaser.io/Phaser.GameObjectFactory.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.GameObjectFactory.html" target="_blank">http://docs.phaser.io/Phaser.GameObjectFactory.html</a></small>
 
 {% highlight javascript %}
 function create() {
-    //image, sprite, audio and others are all methods of the factory
+    //Imagem, sprite, audio e afins são métodos do GameObjectFactory
     game.add.image(x, y, 'key');
     var player = game.add.sprite(x, y, 'key', frame, group);
 }
 {% endhighlight %}
 
-###Repositioning an objects anchor
+###Reposicionar a referência de posicionamento dum objeto
 
-<small>Reference: <a href="https://github.com/photonstorm/phaser/wiki/Graphics" target="_blank">https://github.com/photonstorm/phaser/wiki/Graphics</a></small>
+<small>Referência: <a href="https://github.com/photonstorm/phaser/wiki/Graphics" target="_blank">https://github.com/photonstorm/phaser/wiki/Graphics</a></small>
 
 {% highlight javascript %}
-//Objects have an anchor property that goes from 0 (top left) to 1 (bottom right)
-//It defaults to 0,0 but it can be changed easily
+//Objetos tem uma propriedade de âncora que vai de 0 (topo esquerdo) até 1 (canto inferior direito)
+//O padrão é 0,0 mas é fácil mudar
 image.anchor.x = 0.2;
 image.anchor.y = 1;
 
@@ -162,22 +161,22 @@ image.anchor.y = 1;
 image.anchor.setTo(0.5,0.5);
 {% endhighlight %}
 
-###Scaling an object
+###Escalonar um objeto
 
-<small>Reference: <a href="https://github.com/photonstorm/phaser/wiki/Graphics" target="_blank">https://github.com/photonstorm/phaser/wiki/Graphics</a></small>
+<small>Referência: <a href="https://github.com/photonstorm/phaser/wiki/Graphics" target="_blank">https://github.com/photonstorm/phaser/wiki/Graphics</a></small>
 
 {% highlight javascript %}
-//Objects have a scale property that defaults to 1
-//Negative values essentially mirror it on the affected axis
+//A escala dos objetos é 1, por padrão
+//Valores negativos essencialmente espelham o objeto no eixo em questão
 image.scale.x = -1;
 
-//This doubles the size of the object
+//Isso dobra o tamanho do objeto
 image.scale.setTo(2,2);
 {% endhighlight %}
 
-###Displaying an image
+###Mostrar uma imagem
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Image.html" target="_blank">http://docs.phaser.io/Phaser.Image.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Image.html" target="_blank">http://docs.phaser.io/Phaser.Image.html</a></small>
 
 {% highlight javascript %}
 function create() {
@@ -185,24 +184,24 @@ function create() {
 }
 {% endhighlight %}
 
-###Working with sprites
+###Trabalhar com sprites
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Sprite.html" target="_blank">http://docs.phaser.io/Phaser.Sprite.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Sprite.html" target="_blank">http://docs.phaser.io/Phaser.Sprite.html</a></small>
 
 {% highlight javascript %}
 function create() {
-    //Assign it to a variable so we can reference it
+    //Atribua-o a uma variável para podermos chamá-lo mais tarde
     var sprite = game.add.sprite(x, y, 'key');
 
-    //Now we can access its properties and methods
+    //Agora podemos acessar seus métodos e propriedades
     sprite.x = 200;
     sprite.y = 300;
 }
 {% endhighlight %}
 
-###Adding & playing animations
+###Adicionando e tocando animações
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.AnimationManager.html" target="_blank">http://docs.phaser.io/Phaser.AnimationManager.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.AnimationManager.html" target="_blank">http://docs.phaser.io/Phaser.AnimationManager.html</a></small>
 
 {% highlight javascript %}
 function create() {
@@ -211,58 +210,58 @@ function create() {
 }
 {% endhighlight %}
 
-###Working with animations
+###Trabalhando com animações
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Animation.html" target="_blank">http://docs.phaser.io/Phaser.Animation.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Animation.html" target="_blank">http://docs.phaser.io/Phaser.Animation.html</a></small>
 
 {% highlight javascript %}
 function create() {
-    //Assign it so we can reference it later
+    //Atribua-o a uma variável para podermos chamá-lo mais tarde
     var run = sprite.animations.add('name', [frames], frameRate, loop);
 
-    //Second parameter is the context, usually 'this'
+    //O segundo parâmentro é o contexto, geralmente 'this'
     run.onStart.add(listener, this);
 }
 
 function listener() {
-    console.log("You just started running!");
+    console.log("Você começou a correr!");
 }
 {% endhighlight %}
 
 
-###Displaying text
+###Mostrar texto
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Text.html" target="_blank">http://docs.phaser.io/Phaser.Text.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Text.html" target="_blank">http://docs.phaser.io/Phaser.Text.html</a></small>
 
 {% highlight javascript %}
 function create() {
-    //Assigned for later use
-    var label = game.add.text(x, y, "text", {style}, group);
-    label.text = "I'm changing the text inside the label var!";
+    //Atribua-o a uma variável para podermos chamá-lo mais tarde
+    var label = game.add.text(x, y, "texto", {style}, group);
+    label.text = "Estou mudando o texto dentro da variável label!";
 }
 {% endhighlight %}
 
 ###Tweening
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Tween.html" target="_blank">http://docs.phaser.io/Phaser.Tween.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Tween.html" target="_blank">http://docs.phaser.io/Phaser.Tween.html</a></small>
 
 {% highlight javascript %}
-//Adding an example sprite but you can tween pretty much anything
+//Adicionando um sprite exemplo mas dá para usar tweens com quase qualquer coisa
 var player = game.add.sprite(100, 100, 'player');
 
 game.add.tween(player)
-    .to({x:500}, 400) //change player.x to 500 over 400ms
+    .to({x:500}, 400) //muda o player.x para 500 num período de 400ms
     .start();
 {% endhighlight %}
 
 
-###Playing music
+###Tocar música
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Sound.html" target="_blank">http://docs.phaser.io/Phaser.Sound.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Sound.html" target="_blank">http://docs.phaser.io/Phaser.Sound.html</a></small>
 
 {% highlight javascript %}
 function create() {
-    //Assign it so we can reference it 
+    //Atribua-o a uma variável para podermos chamá-lo mais tarde
     var music = game.add.audio('key', volume, loop);
     music.loop = true;
     music.play();
@@ -270,163 +269,165 @@ function create() {
 {% endhighlight %}
 
 
-###Working with timers
+###Trabalhando com temporizadores (timers)
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Timer.html" target="_blank">http://docs.phaser.io/Phaser.Timer.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Timer.html" target="_blank">http://docs.phaser.io/Phaser.Timer.html</a></small>
 
 {% highlight javascript %}
-//Three types of timers: looping, one time event, repeat.
+//Três tipos de timers: em loop, evento único, repetir.
 var looping = game.time.events.loop(delay, callback, context);
 var once = game.time.events.add(delay, callback, context);
 var repeat = game.time.events.repeat(delay, repeatCount, callback, context);
-//You can also pass one last argument with the callback arguments
+
+//Você também pode passar mais parâmetros no fim.
+//Eles serão usados como argumentos na callback
 
 game.time.events.pause(loopingTimer);
 game.time.events.remove(once);
 {% endhighlight %}
 
-###Input
+###Entrada (input)
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Input.html" target="_blank">http://docs.phaser.io/Phaser.Input.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Input.html" target="_blank">http://docs.phaser.io/Phaser.Input.html</a></small>
 
 {% highlight javascript %}
-//Input can come from mouse, touch or keyboard
-//This is the parent object, with properties for setting how input works
+//Input pode vir do mouse, toque, teclado, joysticks, etc...
+//Esse é o objeto pai, com as propriedades que determinam como funciona toda entrada.
 
-//Allows up to a second between taps for a double click
+//Configura em um segundo o tempo para um clique duplo
 game.input.doubleTapRate = 1000;
 
-//Increases the hitbox for touch
+//Aumenta o hitbox do toque
 game.input.circle = 66;
 {% endhighlight %}
 
-###Mouse & touch input
+###Entrada de mouse e toque
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Pointer.html" target="_blank">http://docs.phaser.io/Phaser.Pointer.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Pointer.html" target="_blank">http://docs.phaser.io/Phaser.Pointer.html</a></small>
 
 {% highlight javascript %}
 if (game.input.mousePointer.isDown()) {
-    console.log("Mouse X when you clicked was: "+game.input.mousePointer.x);
+    console.log("Posição X do mouse quando você clicou: "+game.input.mousePointer.x);
 }
 {% endhighlight %}
 
-###Keyboard input
+###Entrada de teclado
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Keyboard.html" target="_blank">http://docs.phaser.io/Phaser.Keyboard.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Keyboard.html" target="_blank">http://docs.phaser.io/Phaser.Keyboard.html</a></small>
 
-<small>Keycodes: <a href="http://docs.phaser.io/Keyboard.js.html#sunlight-1-line-557" target="_blank">http://docs.phaser.io/Keyboard.js.html#sunlight-1-line-557</a></small>
+<small>Código das teclas: <a href="http://docs.phaser.io/Keyboard.js.html#sunlight-1-line-557" target="_blank">http://docs.phaser.io/Keyboard.js.html#sunlight-1-line-557</a></small>
 
 {% highlight javascript %}
 if (game.input.keyboard.justReleased(Phaser.Keyboard.SPACEBAR, 10000)) {
-    console.log("Spacebar has been pressed in the last 10 seconds.");
+    console.log("Barra de espaço foi pressionada nos últimos 10 segundos.");
 }
 
 //Assigning Up, Down, Left and Right to a variable
 var arrow =  game.input.keyboard.createCursorKeys();
 if (arrow.up.isDown) {
-    console.log("You are pressing the up arrow!");
+    console.log("Você está apertando a seta pra cima!");
 }
 
-//This will stop the arrow keys from scrolling the page
+//Isso impede que as setas rolem a página
 game.input.keyboard.addKeyCapture(arrow);
 {% endhighlight %}
 
-###Working with groups
+###Trabalhando com grupos
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Group.html" target="_blank">http://docs.phaser.io/Phaser.Group.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Group.html" target="_blank">http://docs.phaser.io/Phaser.Group.html</a></small>
 
 {% highlight javascript %}
-//Remember to assign it so we can reference it
+//Lembre-se de atribuir à uma varíavel para poder referenciar mais tarde
 var enemies = game.add.group();
 
-//We can add an already created object
+//Podemos adicionar um objeto que criamos previamente
 enemies.add(button);
 
-//Or we can create a new object in the group
+//Ou criar um objeto diretamente no grupo
 enemies.create(x, y, 'enemy_sprite');
 
-//You can use setAll to modify properties across all children
+//Você pode usar setAll para modificar propriedades de todos os membros do grupo
 enemies.setAll('x', 500);
 {% endhighlight %}
 
 
-###Adding physics to Sprites
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Physics.Arcade.html" target="_blank">http://docs.phaser.io/Phaser.Physics.Arcade.html</a></small>
+###Adicionando física aos sprites
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Physics.Arcade.html" target="_blank">http://docs.phaser.io/Phaser.Physics.Arcade.html</a></small>
 
 {% highlight javascript %}
 function create() {
-    //First we start the system
+    //Primeiro iniciamos o sistema
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
-    //We then create our sprite & enable physics on it
+    //Depois criamos nossos objetos e ativamos as propriedades físicas neles
     sprite = game.add.sprite(x, y, 'key');
     game.physics.enable(sprite, Phaser.Physics.ARCADE);
 
-    //Now our sprite has an object body as a property
+    //Agora nosso sprite tem um objeto body como propriedade
     sprite.body.velocity.setTo(x, y);
     sprite.body.bounce.set(0.8);
 }
 {% endhighlight %}
 
-###Handling Collision
+###Manejando colisões
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Physics.Arcade#collide.html" target="_blank">http://docs.phaser.io/Phaser.Physics.Arcade#collide.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Physics.Arcade#collide.html" target="_blank">http://docs.phaser.io/Phaser.Physics.Arcade#collide.html</a></small>
 
 {% highlight javascript %}
 function update() {
-    //You can collide a group with itself
+    //Você pode colidir um grupo com ele mesmo
     game.physics.arcade.collide(sprites);
     
-    //You can call a function when a collision happens
+    //Você pode chamar uma função quando ocorre uma colisão
     game.physics.arcade.collide(sprites, monsters, callback);
     
-    //You can perform additional checks with a processCallback
-    //If it is false, the collision will not happens
+    //Você pode checar parâmetros adicionar com uma processCallback
+    //Se essa processCallback for falsa, a colisão não ocorre
     game.physics.arcade.collide(sprites, monsters, null, processCallback);
     
-    //You can perform the following collisions:
-    //Sprite vs Sprite or
-    //Sprite vs Group or
-    //Group  vs Group or
-    //Sprite vs Tilemap Layer or
-    //Group  vs Tilemap Layer
+    //As seguintes colisões são possíveis:
+    //Sprite vs Sprite ou
+    //Sprite vs Grupo ou
+    //Grupo  vs Grupo ou
+    //Sprite vs Tilemap Layer ou
+    //Grupo  vs Tilemap Layer
 }
 {% endhighlight %}
 
-###Camera
+###Câmera
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Camera.html" target="_blank">http://docs.phaser.io/Phaser.Camera.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Camera.html" target="_blank">http://docs.phaser.io/Phaser.Camera.html</a></small>
 
 {% highlight javascript %}
-//Lets follow a sprite named 'missile'
+//Vamos seguir um míssel pela tela
 game.camera.follow(missile);
 
-//Once the missile explodes, maybe we want to reset the camera
+//Quando ele explodir, essa função permite zerar a câmera
 game.camera.reset();
 
-//Something cool is happening, let's pan the camera there
+//Aconteceu algo legal, vamos mover a câmera para lá!
 game.camera.x = 500;
 {% endhighlight %}
 
-###Particles
+###Partículas
 
-<small>Reference: <a href="http://docs.phaser.io/Phaser.Particles.Arcade.Emitter.html" target="_blank">http://docs.phaser.io/Phaser.Particles.Arcade.Emitter.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Particles.Arcade.Emitter.html" target="_blank">http://docs.phaser.io/Phaser.Particles.Arcade.Emitter.html</a></small>
 
 {% highlight javascript %}
 emitter = game.add.emitter(x, y, maxParticles);
 emitter.makeParticles('image');
 emitter.setAlpha(min, max, rate, easing, yoyo);
 
-//To use gravity on the emitter, start the physics system
+//Para usar gravidades com o emissor, inicie o sistema de física
 game.physics.startSystem(Phaser.Physics.ARCADE);
 emitter.gravity = 200;
 emitter.start();
 {% endhighlight %}
 
-###Contribute!
+###Contribua!
 
-I'd like to keep revisiting this cheatsheet every once in a while so that it stays relevant.
+Eu gostaria de continuar revisitando essa cola de tempos em tempos - tanto para garantir sua relevância como para ampliá-la e refiná-la.
 
-I'm open to suggestions, improvements and corrections - either on <a href="https://github.com/OttoRobba/invrse/blob/gh-pages/_posts/2014-10-17-phaser-cheatsheet.md" target="_blank">gitHub</a> or in the comments below.
+Eu estou aberto a sugestões, melhorias e correções - ou via <a href="https://github.com/OttoRobba/invrse-pt/blob/gh-pages/_posts/2014-10-17-phaser-cheatsheet.md" target="_blank">gitHub</a> ou nos comentários abaixo.
 
-Also, please let me know what you think of it. :)
+Gostaria também de saber as opiniões, então aproveite e deixa a sua abaixo!
