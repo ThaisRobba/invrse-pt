@@ -19,7 +19,8 @@ Cada parte da cola é associada diretamente com partes da documentação pra fac
 
 {% highlight javascript %}
 var game = new Phaser.Game(largura, altura, renderizador, "div_pai");
-//Todos os parâmetros são opcionais (e existem outro além desse) mas geralmente queremos pelo menos a altura e largura.
+//Todos os parâmetros são opcionais (e existem outro além desse)
+//Geralmente queremos pelo menos a altura e largura.
 //Lembre-se que essa variável herdará uma série de propriedades e funções.
 {% endhighlight %}
 
