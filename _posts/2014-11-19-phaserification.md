@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Construindo seus jogos de Phaser com Browserify
+title:      Construindo jogos de Phaser com Browserify
 date:       2014-11-19 20:00:00
 permalink:  construir-phaser-com-browserify
 categories: 
