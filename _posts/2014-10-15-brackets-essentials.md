@@ -5,6 +5,7 @@ date:       2014-10-15 20:00:00
 permalink:  brackets-extensoes-essenciais
 categories: 
     - text editor
+    - resource
 comments:   true
 ---
 

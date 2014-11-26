@@ -6,7 +6,9 @@ permalink:  construir-phaser-com-browserify
 categories: 
     - tutorial
     - programming
+    - resource
 comments:   true
+image: phaserification
 ---
 
 Fazer projetos maiores usando JavaScript pode ser um problemão - não existe interface nativa (por enquanto) para importar as dependências de um arquivo e o método atual de resolução involve adicionar e mexer manualmente num arquivo html. Além disso, sendo JS uma língua 'script', não há nenhum modo nativo de concatenar vários arquivos num só (e na ordem correta).

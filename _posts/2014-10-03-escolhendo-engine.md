@@ -5,6 +5,7 @@ date: 2014-10-03 10:00
 permalink: como-escolher-a-engine-certa
 categories: 
     - game framework
+    - devlife
 comments: true
 ---
 Escolher a melhor engine/game framework é uma tarefa bastante difícil, ainda mais dada a quantidade de opções que existem e o número de variáveis envolvidades nessa decisão.

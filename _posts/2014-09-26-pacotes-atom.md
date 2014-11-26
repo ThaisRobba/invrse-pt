@@ -5,6 +5,7 @@ date:       2014-09-26 20:00:00
 permalink:  atom-pacotes-recomendados
 categories: 
     - text editor
+    - resource
 comments:   true
 ---
 
