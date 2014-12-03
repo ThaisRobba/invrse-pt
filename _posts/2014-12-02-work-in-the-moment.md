@@ -2,7 +2,7 @@
 layout:     post
 title:      Trabalhando de maneira presente
 date:       2014-12-02 20:00:00
-permalink:  in-the-moment
+permalink:  trabalhando-de-maneira-presente
 categories:
     - devlife
 comments:   true
