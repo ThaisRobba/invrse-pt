@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Trabalhando de maneira presente
-date:       2014-12-02 20:00:00
+date:       2014-12-03 20:00:00
 permalink:  trabalhando-de-maneira-presente
 categories:
     - devlife
