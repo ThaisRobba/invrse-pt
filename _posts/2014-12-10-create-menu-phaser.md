@@ -180,19 +180,19 @@ module.exports = {
             .start();
     },
 
-    //Here we will set the rules for how it moves
-    //We need to pass the variable holding the cursor keys
-    //and the object that holds the buttons.
+    //Aqui vamos definir as regras de como ela se move
+    //Precisamos passar a variável que guarda as teclas de movimento
+    //e passaremos também o objeto que guarda os botões.
     move: function (cursors, buttons) {
         if (cursors.down.isDown && this.arrow.canMove) {
-            //This stops the arrow from traveling way too fast
+            //Isso impede a seta de mover-se rápido demais
             this.arrow.canMove = false;
             
-            //Which is reset to true after a 255ms delay
+            //Volta a ser true depois de 255ms
             this.allowMovement();
             
             if (this.arrow.currentButton === 1) {
-                //I made a custom tween function for this
+                //Fiz um tween especial pra isso
                 this.tween(buttons, 2);
             } else if (this.arrow.currentButton === 2) {
                 this.tween(buttons, 3);
@@ -214,7 +214,7 @@ module.exports = {
         }
 
         if (game.input.keyboard.isDown(Phaser.Keyboard.ENTER)) {
-            //This will activate the button that the pointer is at
+            //Isso vai ativer o botão no qual a seta estiver
             this.activateButton(buttons, this.arrow.currentButton);
         }
     },
@@ -240,16 +240,16 @@ module.exports = {
 };
 {% endhighlight %}
 
-###Adding pointer to menu
+###Adicionando a seta ao menu
 
-The first thing we do is requiring the arrow file.
+A primeira coisa que fazemos é requerer o arquivo da seta.
 
 {% highlight javascript %}
 //menu.js
 var arrow = require('../entities/menu_arrow.js');
 {% endhighlight %}
 
-Then we can call the arrow.draw() and arrow.move() in create and update, respectively.
+Daí podemos chamar arrow.draw() e arrow.move() na função create e update, respectivamente.
 
 {% highlight javascript %}
 //menu.js
@@ -265,13 +265,14 @@ module.exports = {
 };
 {% endhighlight %}
 
-This will break though, because we need to pass the cursor keys and the buttons object for the arrow.move function. We can add keyboard interation by adding the following line to menu.js' create function:
+Isso não vai funcionar porque precisamos passar a variável com as teclas de movimentação e o objeto com os botões. Podemos fazê-lo assim óh:
 
 {% highlight javascript %}
 this.cursors = game.input.keyboard.createCursorKeys();
 {% endhighlight %}
 
-Our final menu.js file will look like this:
+O que vai deixar o nosso arquivo menu.js assim:
+
 {% highlight javascript %}
 var buttons = require('../entities/menu_buttons.js'),
     arrow = require('../entities/menu_arrow.js');
@@ -292,12 +293,12 @@ module.exports = {
 };
 {% endhighlight %}
 
-###End Result
+###Resultado final
 
 <iframe src="{{site.baseurl}}/examples/phaser-menu/index.html" width="100%" height="480px" seamless frameborder="0"></iframe>
 
-###Download template
+###Baixe o template
 
-You can download the template (including instructions for use with Browserify, loading screen and menu) at my <a href="https://github.com/OttoRobba/browserify-phaser/tree/menu" target="_blank">github repo</a>!
+Você pode fazer o download do modelo base (com tela de loading, Browserify e afins) em <a href="https://github.com/OttoRobba/browserify-phaser/tree/menu" target="_blank">meu repositório do GitHub</a>!
 
-I hope this is helpful, let me know what you think. :)
+Espero que isso seja útil! Comente abaixo o que você achou. :)
