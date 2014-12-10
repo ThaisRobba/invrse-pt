@@ -30,7 +30,7 @@ Que você pode então importar em outros arquivos:
 
 {%highlight javascript%}
 //main.js
-var square = require(./square.js);
+var square = require('./square.js');
 
 console.log(square(4)); //resultado apresentado será 16
 {%endhighlight%}
@@ -52,8 +52,8 @@ exports.double = function(num) {
 Que nós podemos requerer assim:
 {%highlight javascript%}
 //main.js
-var square = require(./math.js).square;
-var double = require(./math.js).double;
+var square = require('./math.js').square;
+var double = require('./math.js').double;
 
 console.log(square(4)); //resultado apresentado será 16
 console.log(double(4)); //resultado apresentado será 8
