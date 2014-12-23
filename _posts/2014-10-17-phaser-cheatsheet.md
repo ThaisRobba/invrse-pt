@@ -373,7 +373,7 @@ function create() {
 
 ###Manejando colisões
 
-<small>Referência: <a href="http://docs.phaser.io/Phaser.Physics.Arcade#collide.html" target="_blank">http://docs.phaser.io/Phaser.Physics.Arcade#collide.html</a></small>
+<small>Referência: <a href="http://docs.phaser.io/Phaser.Physics.Arcade.html#collide" target="_blank">http://docs.phaser.io/Phaser.Physics.Arcade.html#collide</a></small>
 
 {% highlight javascript %}
 function update() {
