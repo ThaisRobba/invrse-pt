@@ -44,6 +44,13 @@ Como Pokémons não existem (portanto não posso capturar todos) minha meta é c
 </div>
 
 <div class="bar">
+<div class="progress-span">HTML/CSS</div>
+<div id="progressbar">
+ <div class=" proficiency three-quarters">competente</div>
+</div>
+</div>
+
+<div class="bar">
 <div class="progress-span">MoonScript</div>
 <div id="progressbar">
  <div class=" proficiency three-quarters">competente</div>
